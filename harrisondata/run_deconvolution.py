@@ -35,6 +35,8 @@ niter = args.niter
 
 if bead_image_file_str is None:
     bead_image_file_str = input_file_str[0:35] + "PSF_bead_image_sigma.csv" #/harrisondata/OS_LLSM_191206_MC191_ with appropriate date in middle
+else: 
+    bead_image_file_str = bead_image_file_str[0]
 
 if os.path.isfile(input_file_str) & os.path.isfile(bead_image_file_str):
     msg = 'Preparing to deconvole the image stack ' + input_file_str + ' using a PSF derived from the bead image at ' + bead_image_file_str
